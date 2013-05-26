@@ -1,51 +1,122 @@
+<!--
+<div class="row-fluid">
+  <div class="input-append">
+    <input class="span4" id="appendedInputButton" type="text">
+    <button class="btn" type="button">Go!</button>
+  </div>
+  <div class="input-append">
+    <input class="span4 offset2" id="appendedInputButton" type="text">
+    <button class="btn" type="button">Go!</button>
+  </div>
+  </div>
 
-<div class="center hero-unit">
-  <h1>Welcome to Beauty Twin</h1>
+-->
 
-  <h2>
-    Sign up and say goodbye to your beauty problems!
-  </h2>
+    <div class="container" style="width: auto;">
+      <div class="row-fluid">  
+        <div class="span3">  
+          <div class="input-append">
+            <input class="Ask" id="appendedInputButton" type="text" placeholder="Ask a question">
+            <button class="btn" type="button">Ask</button>
+          </div>  
+        </div>  
+        <div class="span3 offset1">  
+          <div class="input-append">
+            <input class="Search" id="appendedInputButton" type="text" placeholder="Search Question,Topics & Products">
+            <button class="btn" type="button">Go</button>
+          </div> 
+        </div>  
+        <div class="span3 offset2">  
+          <div class="input-append btn-group pull-right">
+            <input class="Categories" id="appendedInputButton" type="text" placeholder="Browse Categories        " style="width: auto;">
+            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class=""></i> Hair</a></li>
+              <li><a href="#"><i class=""></i> Makeup</a></li>
+              <li><a href="#"><i class=""></i> Skin</a></li>
+              <li><a href="#"><i class=""></i> Body</a></li>
+            </ul>
+          </div> 
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
-</div>
+        </div>
+
+        </div>
+
+
+    
+
+
+  <div id="navbar-example" class="navbar navbar-static">
+    <div class="navbar-inner">
+      <div class="container" style="width: auto;">
+        <a class="brand" href="#">Categories</a>
+        <ul class="nav" role="navigation">
+          <li class="dropdown">
+            <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Hair <b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://google.com">Action</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#anotherAction">Another action</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown"> Make up <b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
 
 <!--  Carousel - consult the Twitter Bootstrap docs at
-      http://twitter.github.com/bootstrap/javascript.html#carousel -->
-<div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
-  <div class="carousel-inner">
-    <div class="item active"><!-- class of active since it's the first item -->
-      
-      <img alt="" src="/assets/Makeup_1.jpg" />
-      <div class="carousel-caption">
-        <p>Caption text here</p>
+  http://twitter.github.com/bootstrap/javascript.html#carousel -->
+  <div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
+    <div class="carousel-inner">
+      <div class="item active"><!-- class of active since it's the first item -->
+        <img src="http://placehold.it/1300x500" alt="" />
+        <!--<img alt="" src="/assets/Makeup_1.jpg" /> -->
+        <div class="carousel-caption">
+          <p>Caption text here</p>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img alt="" src="/assets/SkinCare_2.jpg" />
-      <div class="carousel-caption">
-        <p>Caption text here</p>
+      <div class="item">
+        <img src="http://placehold.it/1200x500" alt="" />
+        <div class="carousel-caption">
+          <p>Caption text here</p>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img alt="" src="/assets/Hair_3.jpg" />
-      <div class="carousel-caption">
-        <p>Caption text here</p>
+      <div class="item">
+        <img src="http://placehold.it/1200x500" alt="" />
+        <div class="carousel-caption">
+          <p>Caption text here</p>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img alt="" src="/assets/Body_4.jpg" />
-      <div class="carousel-caption">
-        <p>Caption text here</p>
+      <div class="item">
+        <img src="http://placehold.it/1200x500" alt="" />
+        <div class="carousel-caption">
+          <p>Caption text here</p>
+        </div>
       </div>
-    </div>
-  </div><!-- /.carousel-inner -->
+    </div><!-- /.carousel-inner -->
   <!--  Next and Previous controls below
-        href values must reference the id for this carousel -->
-    <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+  href values must reference the id for this carousel -->
+  <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
 </div><!-- /.carousel -->
-
-
 
 
 
