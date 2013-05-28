@@ -1,11 +1,12 @@
+$grayMediumLight: #eaeaea;
+$fontColor:#FF69B4;
 
 @import "bootstrap";
 @import "bootstrap-responsive";
 
 /* mixins, variables, etc. */
 
-$grayMediumLight: #eaeaea;
-$fontColor:#FF69B4;
+
 
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
@@ -81,7 +82,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color:$fontColor;
+  color:fontColor;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
