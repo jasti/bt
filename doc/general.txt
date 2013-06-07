@@ -1,0 +1,3 @@
+* Run the server in sandbox mode to test directly on the db
+rails console --sandbox
+

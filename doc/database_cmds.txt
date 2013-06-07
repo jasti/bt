@@ -1,0 +1,7 @@
+bundle exec rake db:reset
+    Wipes the database clean
+bundle exec rake db:populate
+    Populates the database with commands from here lib/tasks/sample_data.rake
+bundle exec rake db:test:prepare
+    Prepares data for the tests
+    
