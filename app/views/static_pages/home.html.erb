@@ -1,3 +1,25 @@
+	
+	 <!-- Ignoring the separate search and ask approach for now
+
+	 <div class="row-fluid">  
+	   <div class="span2">  
+	     <div class="input-append">
+	       <input class="Ask" id="appendedInputButton" type="text" placeholder="Ask a question">
+	       <button class="btn" type="button">Ask</button>
+	     </div>  
+	   </div>  
+	   <div class="span2 offset2">   
+	     <div class="input-append" pull right>
+	       <input class="Search" id="appendedInputButton" type="text" placeholder="Search">
+	       <button class="btn" type="button">Go</button>
+	     </div> 
+	   </div>  
+	  </div>
+-->
+
+
+
+
 	 <% if signed_in? %>
 	    <div class="row">
 	      <aside class="span4">
@@ -7,69 +29,29 @@
 	        <section>
 	          <%= render 'shared/stats' %>
 	        </section>
-	        <section>
-	          <%= render 'shared/post_form' %>
-	        </section>
 	      </aside>
-	      <div class="span8">
-	            <h3>Post Feed</h3>
-	            <%= render 'shared/feed' %>
+
+	      <aside class="span4">
+	      <div class="span4">
+	            <%= render 'shared/user_quiz_info' %>
 	      </div>
+
+	      </aside>
+	      <aside class="span3">
+	      <div class="span3">
+	            <%= render 'shared/post_form' %>
+	      </div>
+	      
+	      </aside>
+
 		    </div>  
-	<% else %>
-
-	      
-	        <div class="row-fluid">  
-	          <div class="span2">  
-	            <div class="input-append">
-	              <input class="Ask" id="appendedInputButton" type="text" placeholder="Ask a question">
-	              <button class="btn" type="button">Ask</button>
-	            </div>  
-	          </div>  
-	          <div class="span2 offset2">   
-	            <div class="input-append" pull right>
-	              <input class="Search" id="appendedInputButton" type="text" placeholder="Search">
-	              <button class="btn" type="button">Go</button>
-	            </div> 
-	          </div>  
-	         </div>
-	        
-
-
-	      
-
-
-	    <div id="navbar-example" class="navbar navbar-static">
-	      <div class="navbar-inner">
-	        <div class="container" style="width: auto;">
-	          <a class="brand" href="#">Categories</a>
-	          <ul class="nav" role="navigation">
-	            <li class="dropdown">
-	              <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Hair <b class="caret"></b></a>
-	              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-	                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://google.com">Action</a></li>
-	                <li role="presentation"><a role="menuitem" tabindex="-1" href="#anotherAction">Another action</a></li>
-	                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-	                <li role="presentation" class="divider"></li>
-	                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-	              </ul>
-	            </li>
-	            <li class="dropdown">
-	              <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown"> Make up <b class="caret"></b></a>
-	              <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
-	                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-	                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-	                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-	                <li role="presentation" class="divider"></li>
-	                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-	              </ul>
-	            </li>
-	          </ul>
-	        </div>
-	      </div>
-	    </div>
-
-
+		  <h3> Posts </h3>
+		  <div class="row">	
+		  		<div class="span8">
+		  	  <%= render 'shared/feed' %>
+		  	  </div>
+		  </div>
+		<% else %>
 
 
 

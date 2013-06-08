@@ -1,40 +1,103 @@
-  <header class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container-fluid">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
-        
-        <%= link_to "Beauty Twin", root_path, id: "logo" %>
-        
-          <div class="nav-collapse">
-          <ul class="nav pull-right">
-            <li><%= link_to "Home", root_path %></li>
-            <% if signed_in? %>
-              <li><%= link_to "Users", users_path %></li>
-              <li id="fat-menu" class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Account <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><%= link_to "Profile", current_user %></li>
-                  <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                                
-                  <li class="divider"></li>
-                  <li>
-                    <%= link_to "Sign out", signout_path, method: "delete" %>
+      <header class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            
+            <%= link_to "Beauty Twin", root_path, id: "logo" %>
+            
+              <div class="nav-collapse">
+              <ul class="nav pull-right">
+                <li><%= link_to "Home", root_path %></li>
+                <% if signed_in? %>
+                  <li><%= link_to "Users", users_path %></li>
+                  <li id="fat-menu" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      Account <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><%= link_to "Profile", current_user %></li>
+                      <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                                    
+                      <li class="divider"></li>
+                      <li>
+                        <%= link_to "Sign out", signout_path, method: "delete" %>
+                      </li>
+                    </ul>
                   </li>
-                </ul>
-              </li>
-            <% else %>
-              <li><%= link_to "Sign Up", signup_path %></li>
-              <li><%= link_to "Sign in", signin_path %></li>
-            <% end %>
-          </ul>
+                <% else %>
+                  <li><%= link_to "Sign Up", signup_path %></li>
+                  <li><%= link_to "Sign in", signin_path %></li>
+                <% end %>
+              </ul>
+
+            </div>
+            
+          </div>
         </div>
-        
-      </div>
-    </div>
-  </header>
+        <div id="navbar-categories" class="navbar navbar-fixed">
+          <div class="navbar-inner">
+            <div class="container" style="width: auto;">
+              <a class="brand" href="#"> Categories</a>
+              <ul class="nav" role="navigation">
+
+                <li class="dropdown">
+                  <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Makeup <b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://google.com">Cheeks</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#anotherAction"> Eyes</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Face</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lips</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown"> Skin Care <b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Anti-Aging</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Acne</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Daily Care</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Facial Hair Removal</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown"> Hair <b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Damaged Hair</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Split Ends</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Frizz</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Oiliness</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Scalp Problems</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Coloring</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Haircuts</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Styles</a></li>
+
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown"> Body <b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fragrance</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nails</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Skin</a></li>
+                  
+                  </ul>
+                </li>  
+              </ul>
+              <form class="navbar-search pull-right">
+                <input type="text" class="search" placeholder="Search Questions">
+              </form>
+              
+              <form class="navbar-search pull-right">
+                <input type="text" class="search-ask" placeholder="Ask a question">
+              
+              </form>
+            </div>
+          </div>
+
+
+        </div>
+      </header>
