@@ -39,12 +39,6 @@ textarea {
     margin-bottom: 10px;
   }
 }
-/* Adjusting the main container width from 940px to 1200px */
-.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
-width: 1200px;
-}
-
-
 
 
 /* typography */
@@ -87,7 +81,7 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   line-height: 1;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   &:hover {
     color: pink;
     text-decoration: none;
